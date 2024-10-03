@@ -29,15 +29,13 @@ const CompleteTheLyrics = () => {
   return (
     <div
       style={{
-        margin: 0,
-        padding: 0,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
         width: "100vw",
-        background: "#fffff)",
+        background: "#fffff",
         overflow: "hidden",
       }}
     >
@@ -54,7 +52,7 @@ const CompleteTheLyrics = () => {
             padding: "10px",
             backgroundColor: "#6a983c",
             color: "#fff",
-            height: "100px",
+            height: "80px",
             width: "170px",
             borderRadius: "15px",
             border: "none",
@@ -74,7 +72,7 @@ const CompleteTheLyrics = () => {
             padding: "10px",
             backgroundColor: "#b13a40",
             color: "#fff",
-            height: "100px",
+            height: "80px",
             width: "170px",
             borderRadius: "15px",
             border: "none",
@@ -94,7 +92,7 @@ const CompleteTheLyrics = () => {
             padding: "10px",
             backgroundColor: "#54828a",
             color: "#fff",
-            height: "100px",
+            height: "80px",
             width: "170px",
             borderRadius: "15px",
             border: "none",
@@ -114,7 +112,7 @@ const CompleteTheLyrics = () => {
             padding: "10px",
             backgroundColor: "#b8713c",
             color: "#fff",
-            height: "100px",
+            height: "80px",
             width: "170px",
             borderRadius: "15px",
             border: "none",
