@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CompleteTheLyrics = () => {
@@ -6,7 +6,9 @@ const CompleteTheLyrics = () => {
   const [lyrics, setLyrics] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [currentSinger, setCurrentSinger] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const handleSingerClick = (color, singer) => {
     if (inputValue.trim() !== "") {
@@ -18,6 +20,7 @@ const CompleteTheLyrics = () => {
     }
 
     setSelectedColor(color);
+    setIsDisabled(false);
     setCurrentSinger(singer);
     navigate(`/singer/${singer}`);
   };
@@ -35,11 +38,11 @@ const CompleteTheLyrics = () => {
         alignItems: "center",
         height: "100vh",
         width: "100vw",
-        background: "#fffff",
+        background: "#000000",
         overflow: "hidden",
       }}
     >
-      <h1 style={{ color: "#fffff", fontSize: "2em", fontWeight: "bold" }}>
+      <h1 style={{ color: "#ffffff", fontSize: "2em", fontWeight: "bold" }}>
         Complete The Lyrics
       </h1>
       <div
@@ -142,6 +145,7 @@ const CompleteTheLyrics = () => {
             boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
             fontSize: "18px",
           }}
+          disabled={isDisabled}
         />
 
         <div
@@ -157,6 +161,7 @@ const CompleteTheLyrics = () => {
             margin: "0 auto",
             overflowY: "scroll",
             boxShadow: "0px 6px 10px rgba(0, 0, 0, 0.1)",
+            scrollbarWidth: "none"
           }}
         >
           {lyrics.map((lyric, index) => (
